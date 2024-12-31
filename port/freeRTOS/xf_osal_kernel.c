@@ -47,7 +47,7 @@ xf_err_t xf_osal_kernel_get_info(xf_osal_version_t *version, char *id_buf, uint3
             id_size = sizeof(KERNEL_ID);
         }
         /* Copy kernel identification string into provided buffer */
-        memcpy(id_buf, KERNEL_ID, id_size);
+        xf_memcpy(id_buf, KERNEL_ID, id_size);
     }
 
     /* Return execution status */
