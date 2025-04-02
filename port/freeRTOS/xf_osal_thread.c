@@ -185,7 +185,7 @@ xf_err_t xf_osal_thread_set_priority(xf_osal_thread_t thread, xf_osal_priority_t
         stat = XF_ERR_INVALID_ARG;
     } else {
         stat = XF_OK;
-        priority = MAP_PRIORITY(priority);
+        priority = (xf_osal_priority_t)MAP_PRIORITY(priority);
         vTaskPrioritySet(hTask, (UBaseType_t)priority);
     }
 

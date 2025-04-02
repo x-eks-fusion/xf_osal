@@ -29,7 +29,9 @@ extern "C" {
 
 /* ==================== [Defines] =========================================== */
 
+#ifndef __STATIC_INLINE
 #define __STATIC_INLINE static inline
+#endif
 
 /*是否处于中断上下文中，一般和架构相关*/
 #ifndef IS_IRQ_MODE
